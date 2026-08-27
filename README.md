@@ -67,6 +67,8 @@ completa en PostgreSQL) y la API:
 | **API Facturas** — diagnóstico | http://localhost:8056/ |
 | **Swagger** (documentación interactiva: ver y probar los endpoints) | http://localhost:8056/swagger |
 | **FRONT** (v7) — la aplicación completa con la marca | http://localhost:8057 |
+| **Entrar al front — usuario ADMINISTRADOR** | `demo@correo.com` / `Demo123!` |
+| Crearlo (una sola vez, 2 comandos) | `curl.exe -X POST http://localhost:8056/api/usuario -H "Content-Type: application/json" -d "{\"email\":\"demo@correo.com\",\"contrasena\":\"Demo123!\"}"` y luego `curl.exe -X POST http://localhost:8056/api/rol-usuario -H "Content-Type: application/json" -d "{\"fkemail\":\"demo@correo.com\",\"fkidrol\":1}"` (el segundo le da el rol Administrador: sin él, el menú sale recortado) |
 | Listar productos | http://localhost:8056/api/producto |
 | PostgreSQL (para SQLTools/pgAdmin, opcional) | `localhost:15449` · `postgres`/`Construccion123!` |
 | SQL Server (opcional — v4) | `localhost,11448` · `sa`/`Construccion123!` |
